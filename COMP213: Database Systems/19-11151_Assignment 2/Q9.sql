@@ -1,0 +1,2 @@
+use EMPDB42B;
+select EmpNo, EName from EMP, Dept, Location where EMP.DeptNo=Dept.DeptNo and Dept.CityID=Location.CityID and CityName=(select CityName from EMP, Dept, Location where EMP.DeptNo=Dept.DeptNo and Dept.CityID=Location.CityID and EName='Gomes');
